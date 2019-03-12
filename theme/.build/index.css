@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url("./poppins-regular.woff2") format("woff2"), url("./poppins-regular.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url("/poppins-bold.woff2") format("woff2"), url("./poppins-bold.woff") format("woff"); }
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.constraint {
+  max-width: 1024px; }
+
+.content {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.hero-image__title {
+  color: red; }
+
+.hero-image__subtitle {
+  color: blue; }

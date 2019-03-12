@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('./poppins-regular.woff2') format('woff2'),
+       url('./poppins-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('/poppins-bold.woff2') format('woff2'),
+       url('./poppins-bold.woff') format('woff');
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+}

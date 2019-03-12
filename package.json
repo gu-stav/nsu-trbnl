@@ -1,0 +1,21 @@
+{
+  "name": "nsu-trbnl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "rollup": "^1.6.0",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "devDependencies": {
+    "rollup-plugin-cpy": "^1.1.0"
+  },
+  "scripts": {
+    "develop": "rollup theme/static/index.js --file theme/.build/index.js --config ./theme/rollup.config.js --format iife --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

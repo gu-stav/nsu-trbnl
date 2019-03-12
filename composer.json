@@ -1,0 +1,16 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "./.plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "require": {}
+}
