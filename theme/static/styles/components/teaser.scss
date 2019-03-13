@@ -1,0 +1,39 @@
+.teaser {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  width: 100%;
+
+  &__title-container {
+    margin-bottom: 3.5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &::before {
+      background-color: currentColor;
+      content: '';
+      height: 2rem;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .headline {
+      background-color: black;
+      display: inline-block;
+      max-width: 35rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__cta {
+    margin-top: 3.5rem;
+    text-align: center;
+  }
+}

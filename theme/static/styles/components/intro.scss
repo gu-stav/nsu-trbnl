@@ -1,0 +1,13 @@
+.intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  &__content-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2rem;
+  }
+}

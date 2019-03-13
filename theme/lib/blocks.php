@@ -1,8 +1,8 @@
 <?php
   $BLOCKS = [
     [
-      'name' => 'hero-image',
-      'title' => __('Hero Image'),
+      'name' => 'intro',
+      'title' => __('Intro'),
       'render_callback'	=> 'acf_block_render_callback',
       'description' => __('A large image title and an optional subtitle.'),
       'category' 	=> 'layout',
@@ -12,15 +12,51 @@
 
     [
       'name' => 'video-grid',
-      'title' => __('Video Grid'),
+      'title' => __('Videos'),
       'render_callback'	=> 'acf_block_render_callback',
       'category' 	=> 'layout',
       'icon' => 'playlist-video',
       'keywords' 	=> array('video', 'grid'),
+    ],
+
+    [
+      'name' => 'image-grid',
+      'title' => __('Images'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'images-alt2',
+      'keywords' 	=> array('image', 'grid'),
+    ],
+
+    [
+      'name' => 'columns',
+      'title' => __('Columns'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'layout',
+      'keywords' 	=> array('column', 'grid'),
+    ],
+
+    [
+      'name' => 'teaser',
+      'title' => __('Teaser'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'media-text',
+      'keywords' 	=> array('teaser'),
+    ],
+
+    [
+      'name' => 'text',
+      'title' => __('Text'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'text',
+      'keywords' 	=> array('text'),
     ]
   ];
 
-  function acf_block_render_callback( $block ) {
+  function acf_block_render_callback($block) {
     $slug = str_replace('acf/', '', $block['name']);
 
     if(file_exists(get_theme_file_path("blocks/{$slug}.php"))) {
@@ -67,10 +103,8 @@
       return "acf/{$block['name']}";
     }, $BLOCKS);
 
-    $core_blocks = array(
-      'core/paragraph',
-      'core/heading'
-    );
+    // disable all core blocks
+    $core_blocks = [];
 
     return array_merge($acf_blocks, $core_blocks);
   }
@@ -92,6 +126,8 @@
   add_action('rest_api_init', 'add_blocks_to_api');
   add_action('acf/init', 'acf_init_blocks');
   add_filter('allowed_block_types', 'allowed_block_types');
+
+  // Video field
   add_filter('acf/update_value/key=field_5c87c3029552d', 'video_update_id', 10, 3);
   add_filter('acf/prepare_field/key=field_5c87c3029552d', 'video_prepare_id', 10, 3);
 ?>

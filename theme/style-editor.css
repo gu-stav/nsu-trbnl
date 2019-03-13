@@ -1,3 +1,21 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 .wp-block {
   max-width: 1024px;
+}
+
+.acf-block-body .acf-block-fields {
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: inherit;
 }

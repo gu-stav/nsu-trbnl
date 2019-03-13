@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<?php
+  wp_nav_menu([
+    'theme_location' => 'navigation',
+    'container' => false,
+    'item_spacing' => 'discard'
+  ]);
+?>
+
 <main class="site-main">
   <?php
     if ( have_posts() ) {

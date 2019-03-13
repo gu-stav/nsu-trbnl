@@ -11,6 +11,7 @@ services:
        - ./theme/:/var/www/html/wp-content/themes/theme
        - ./.plugins/:/var/www/html/wp-content/plugins/
        - ./vendor/:/var/www/html/wp-content/vendor/
+       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
      ports:
        - "80:80"
      restart: always

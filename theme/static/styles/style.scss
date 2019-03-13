@@ -1,5 +1,14 @@
 @import "./base/base.scss";
 
+// Base components
+@import "./components/btn.scss";
+@import "./components/headline.scss";
+@import "./components/image.scss";
+@import "./components/richtext.scss";
+
+// Blocks
 @import "./components/constraint.scss";
 @import "./components/content.scss";
-@import "./components/hero-image.scss";
+@import "./components/intro.scss";
+@import "./components/menu.scss";
+@import "./components/teaser.scss";

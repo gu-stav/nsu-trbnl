@@ -1,8 +1,7 @@
 <?php
 
-add_editor_style(get_template_directory_uri() . '/style-editor.css');
-add_theme_support( 'editor-styles' );
-
+include 'lib/admin.php';
 include 'lib/blocks.php';
+include 'lib/menu.php';
 
 ?>
