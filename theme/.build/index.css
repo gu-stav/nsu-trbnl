@@ -38,6 +38,7 @@ a {
   text-transform: uppercase; }
 
 .headline {
+  display: block;
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 0;
@@ -83,6 +84,20 @@ a {
   flex-direction: column;
   min-height: 100vh; }
 
+.header {
+  align-items: center;
+  background-color: black;
+  border-bottom: 1px solid currentColor;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative; }
+  .header__logo {
+    margin-right: 5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem; }
+
 .intro {
   align-items: center;
   display: flex;
@@ -95,41 +110,46 @@ a {
     margin-top: -2rem; }
 
 .menu {
-  background-color: black;
-  border-bottom: 1px solid currentColor;
-  color: white;
-  justify-content: center;
-  padding: 0 1rem;
-  position: relative; }
+  padding: 0 1rem; }
   .menu,
   .menu .sub-menu {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     margin-bottom: 0;
     margin-top: 0; }
   .menu a {
-    color: currentColor; }
+    color: currentColor;
+    white-space: nowrap; }
   .menu > * + * {
     margin-left: 2rem; }
   .menu > .menu-item > a {
-    border-bottom: 12px solid transparent;
     display: inline-block;
     font-size: 1rem;
     letter-spacing: 2px;
-    margin-bottom: -6px;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    position: relative;
     text-transform: uppercase; }
-  .menu .current-menu-item > a {
-    border-bottom-color: currentColor; }
+  .menu > .current-menu-item > a::after {
+    background-color: currentColor;
+    bottom: -6px;
+    content: '';
+    height: 12px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10; }
   .menu .sub-menu {
+    background-color: black;
     border-bottom: 1px solid white;
     display: none;
     left: 0;
     padding: 1.5rem;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1px);
     width: 100%; }
     .menu .sub-menu > * + *::before {
       content: '–';

@@ -1,0 +1,16 @@
+.header {
+  align-items: center;
+  background-color: black;
+  border-bottom: 1px solid currentColor;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+
+  &__logo {
+    margin-right: 5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}

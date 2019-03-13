@@ -1,12 +1,6 @@
 <?php get_header(); ?>
 
-<?php
-  wp_nav_menu([
-    'theme_location' => 'navigation',
-    'container' => false,
-    'item_spacing' => 'discard'
-  ]);
-?>
+<?php get_template_part('template-parts/header/header'); ?>
 
 <main class="site-main">
   <?php

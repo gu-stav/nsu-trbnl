@@ -3,7 +3,6 @@
   $image = get_field('image');
   $title = get_field('title');
   $subtitle = get_field('subtitle');
-  $text = get_field('text');
 
 ?>
 
@@ -22,9 +21,5 @@
         </small>
       <?php endif; ?>
     </h1>
-
-    <?php if($text): ?>
-      <div class="richtext richtext--is-centered"><?php echo $text; ?></div>
-    <?php endif; ?>
   </div>
 </div>
