@@ -1,0 +1,30 @@
+.quote {
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author {
+    font-size: 0.875rem;
+    font-style: normal;
+    margin-top: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__author-info {
+    color: #9B9B9B;
+    text-transform: none;
+  }
+
+  .richtext {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    > p {
+      display: inline;
+    }
+  }
+}
