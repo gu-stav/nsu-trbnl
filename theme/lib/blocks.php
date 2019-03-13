@@ -53,6 +53,15 @@
       'category' 	=> 'layout',
       'icon' => 'text',
       'keywords' 	=> array('text'),
+    ],
+
+    [
+      'name' => 'quote',
+      'title' => __('Zitat'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'format-quote',
+      'keywords' 	=> array('quote', 'blockquote'),
     ]
   ];
 
