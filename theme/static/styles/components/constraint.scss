@@ -1,3 +1,7 @@
 .constraint {
   max-width: 680px;
+
+  &--wide {
+    max-width: 1024px;
+  }
 }
