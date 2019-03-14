@@ -12,8 +12,20 @@
       border-left: 1px solid rgb(128, 128, 128);
     }
 
-    .richtext + .richtext {
+    > * + * {
       margin-top: 1.5rem;
+    }
+
+    .richtext {
+      text-align: left;
+    }
+
+    .quote {
+      align-items: flex-start;
+    }
+
+    .quote__author {
+      text-align: left;
     }
   }
 }

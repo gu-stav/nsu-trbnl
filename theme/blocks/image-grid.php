@@ -1,5 +1,3 @@
-<?php
-  if(have_rows('images')) {
-    get_template_part('template-parts/images/grid');
-  }
-?>
+<div class="constraint constraint--wide">
+  <?php get_template_part('template-parts/images/grid'); ?>
+</div>

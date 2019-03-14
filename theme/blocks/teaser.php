@@ -19,11 +19,11 @@
     </h2>
   </div>
 
-  <?php
-    if(have_rows('images')) {
-      get_template_part('template-parts/images/grid');
-    }
-  ?>
+  <?php if (have_rows('images')): ?>
+    <div class="constraint constraint--wide">
+      <?php get_template_part('template-parts/images/grid'); ?>
+    </div>
+  <?php endif; ?>
 
   <div class="constraint">
     <?php if($text): ?>
