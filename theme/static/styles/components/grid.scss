@@ -7,7 +7,16 @@
   margin-top: 0;
   padding-left: 0;
 
-  > * {
+  &__item {
     flex: 0 1 33.333%;
+  }
+
+  &--items-1 &__item {
+    flex-basis: 100%;
+  }
+
+  &--items-2 &__item,
+  &--items-4 &__item {
+    flex-basis: 50%;
   }
 }
