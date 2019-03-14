@@ -1,4 +1,5 @@
 .figure {
+  font-size: 0;
   margin: 0;
 
   &__caption {
@@ -7,5 +8,14 @@
     letter-spacing: 1px;
     line-height: 1.125;
     margin-top: 0.5rem;
+  }
+
+  &--is-video &__caption {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--is-video &__caption-container {
+    padding-right: 1rem;
   }
 }

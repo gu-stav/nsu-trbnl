@@ -5,10 +5,9 @@
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
-  padding-left: 1rem;
+  padding-left: 0;
 
   > * {
     flex: 0 1 33.333%;
-    padding: 0 1rem 1rem 0;
   }
 }
