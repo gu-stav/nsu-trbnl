@@ -9,9 +9,13 @@
 <div class="teaser">
   <div class="teaser__title-container">
     <h2 class="headline headline--as-h2">
-      <a href="<?php echo $target; ?>">
-        <?php echo get_field('title'); ?>
-      </a>
+      <?php if ($target): ?>
+        <a href="<?php echo $target; ?>">
+      <?php endif; ?>
+          <?php echo get_field('title'); ?>
+      <?php if ($target): ?>
+        </a>
+      <?php endif; ?>
     </h2>
   </div>
 
@@ -26,10 +30,12 @@
       <div class="richtext"><?php echo $text; ?></div>
     <?php endif; ?>
 
-    <div class="teaser__cta">
-      <a href="<?php echo $target; ?>" class="btn">
-        <?php echo $button_label; ?>
-      </a>
-    </div>
+    <?php if($target && $button_label): ?>
+      <div class="teaser__cta">
+        <a href="<?php echo $target; ?>" class="btn">
+          <?php echo $button_label; ?>
+        </a>
+      </div>
+    <?php endif; ?>
   </div>
 </div>

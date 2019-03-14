@@ -4,10 +4,18 @@
       'name' => 'intro',
       'title' => __('Intro'),
       'render_callback'	=> 'acf_block_render_callback',
-      'description' => __('A large image title and an optional subtitle.'),
       'category' 	=> 'layout',
       'icon' => 'format-image',
       'keywords' 	=> array('hero', 'image', 'intro'),
+    ],
+
+    [
+      'name' => 'intro-quote',
+      'title' => __('Intro (Quote)'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'layout',
+      'icon' => 'format-image',
+      'keywords' 	=> array('hero', 'image', 'intro', 'quote'),
     ],
 
     [

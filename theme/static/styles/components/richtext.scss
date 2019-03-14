@@ -3,13 +3,20 @@
   letter-spacing: 0.05rem;
   line-height: 1.6;
 
+  &--size-small {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
   &--is-centered {
     text-align: center;
   }
 
-  > *:first-child,
+  > *:first-child {
+    margin-top: 0;
+  }
+
   > *:last-child {
     margin-bottom: 0;
-    margin-top: 0;
   }
 }

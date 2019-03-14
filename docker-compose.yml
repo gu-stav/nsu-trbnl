@@ -32,11 +32,11 @@ services:
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: my_wordpress_db_password
 
-   composer:
-    image: composer/composer:php7
-    command: update
-    volumes:
-      - .:/app
+#   composer:
+#    image: composer/composer:php7
+#    command: update
+#    volumes:
+#      - .:/app
 
 volumes:
     wordpress:
