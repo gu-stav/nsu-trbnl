@@ -1,12 +1,42 @@
 .intro {
   align-items: center;
   display: flex;
-  flex-direction: column;
+
+  &--orientation-portrait {
+    flex-direction: row;
+  }
+
+  &--orientation-landscape {
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+  }
+
+  &__image {
+    max-height: 90vh;
+    object-fit: cover;
+  }
+
+  &--orientation-portrait &__image {
+    max-height: 80vh;
+    object-fit: contain;
+  }
 
   &__content-container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: -2rem;
+  }
+
+  &--orientation-landscape &__content-container {
+    transform: translateY(-130%);
+  }
+
+  &--orientation-portrait &__image-container,
+  &--orientation-portrait &__content-container {
+    flex-basis: 50%;
+    padding: 4rem;
   }
 }
