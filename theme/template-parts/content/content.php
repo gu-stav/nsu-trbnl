@@ -1,11 +1,12 @@
 <?php
-  $has_parent = boolval($post->post_parent);
+  $has_parent = get_current_page_depth() >= 2;
 
   if ($has_parent) {
     $modifier = 'has-parent';
   } else {
     $modifier = 'has-no-parent';
   }
+
 ?>
 
 <main class="content content--<?php echo $modifier; ?>">
