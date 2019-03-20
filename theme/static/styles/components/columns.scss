@@ -1,15 +1,18 @@
 .columns {
   display: flex;
   flex-direction: row;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 
   &__column {
+    padding: 4rem;
     width: 50%;
 
     & + & {
       border-left: 1px solid rgb(128, 128, 128);
     }
 
-    > * + * {
+    > *:not(.quote) + *:not(.quote) {
       margin-top: 1.5rem;
     }
 
