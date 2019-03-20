@@ -1,30 +1,22 @@
 .headline {
   display: block;
-  font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 0;
   margin-top: 0;
   text-align: center;
 
   &--as-h1 {
-    font-size: 2.25rem;
-    letter-spacing: 1px;
+    @include text-preset-h1;
   }
 
   &--as-h2 {
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    @include text-preset-h2;
   }
 
   &--as-h3 {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    @include text-preset-h3;
   }
 
   &--as-h4 {
-    font-size: 1.125rem;
-    font-weight: 400;
-    text-transform: uppercase;
+    @include text-preset-h4;
   }
 }

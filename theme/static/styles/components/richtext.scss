@@ -14,4 +14,20 @@
   > *:last-child {
     margin-bottom: 0;
   }
+
+  h2 {
+    @include text-preset-h1;
+  }
+
+  h3 {
+    @include text-preset-h2;
+  }
+
+  h4 {
+    @include text-preset-h3;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
