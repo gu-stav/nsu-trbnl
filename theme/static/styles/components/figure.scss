@@ -18,4 +18,12 @@
   &--is-video &__caption-container {
     padding-right: 1rem;
   }
+
+  &__play {
+    flex: 0 0 auto;
+    height: 2rem;
+    justify-self: flex-end;
+    margin-left: auto;
+    width: 2rem;
+  }
 }
