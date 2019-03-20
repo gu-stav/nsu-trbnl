@@ -53,9 +53,40 @@
                                         },
                                         "default_value": "",
                                         "tabs": "all",
-                                        "toolbar": "full",
+                                        "toolbar": "richtext",
                                         "media_upload": 0,
                                         "delay": 0
+                                    }
+                                ],
+                                "min": "",
+                                "max": ""
+                            },
+                            "layout_5c8a5414266b8": {
+                                "key": "layout_5c8a5414266b8",
+                                "name": "quote",
+                                "label": "Zitat",
+                                "display": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5c8a541b266b9",
+                                        "label": "Zitat",
+                                        "name": "quote",
+                                        "type": "clone",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "clone": [
+                                            "group_5c8a40791eacd"
+                                        ],
+                                        "display": "seamless",
+                                        "layout": "block",
+                                        "prefix_label": 0,
+                                        "prefix_name": 0
                                     }
                                 ],
                                 "min": "",
@@ -101,9 +132,40 @@
                                         },
                                         "default_value": "",
                                         "tabs": "all",
-                                        "toolbar": "full",
+                                        "toolbar": "richtext",
                                         "media_upload": 0,
                                         "delay": 0
+                                    }
+                                ],
+                                "min": "",
+                                "max": ""
+                            },
+                            "layout_5c8a55469410f": {
+                                "key": "layout_5c8a55469410f",
+                                "name": "quote",
+                                "label": "Zitat",
+                                "display": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5c8a554d94110",
+                                        "label": "Zitat",
+                                        "name": "quote",
+                                        "type": "clone",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "clone": [
+                                            "group_5c8a40791eacd"
+                                        ],
+                                        "display": "seamless",
+                                        "layout": "block",
+                                        "prefix_label": 0,
+                                        "prefix_name": 0
                                     }
                                 ],
                                 "min": "",
@@ -297,8 +359,32 @@
     },
     {
         "key": "group_5c8a3f66f0084",
-        "title": "Intro (Quote)",
+        "title": "Intro (Zitate)",
         "fields": [
+            {
+                "key": "field_5c8a50832870d",
+                "label": "Bild",
+                "name": "image",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "large",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
             {
                 "key": "field_5c8a3f7168534",
                 "label": "Zitat",
@@ -420,7 +506,7 @@
                 },
                 "default_value": "",
                 "tabs": "all",
-                "toolbar": "full",
+                "toolbar": "richtext",
                 "media_upload": 0,
                 "delay": 0
             },
@@ -554,7 +640,7 @@
                 },
                 "default_value": "",
                 "tabs": "all",
-                "toolbar": "full",
+                "toolbar": "richtext",
                 "media_upload": 0,
                 "delay": 0
             }
@@ -565,6 +651,112 @@
                     "param": "block",
                     "operator": "==",
                     "value": "acf\/text"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5c8a72873ddd9",
+        "title": "Videos",
+        "fields": [
+            {
+                "key": "field_5c8a72bfeb794",
+                "label": "Videos",
+                "name": "videos",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 9,
+                "layout": "table",
+                "button_label": "Video hinzufügen",
+                "sub_fields": [
+                    {
+                        "key": "field_5c8a7491de57e",
+                        "label": "Vorschaubild",
+                        "name": "preview_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5c8a72d0eb795",
+                        "label": "Youtube Video ID",
+                        "name": "youtube_video_id",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5c8a74bfde57f",
+                        "label": "Video Caption",
+                        "name": "caption",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/video-grid"
                 }
             ]
         ],
