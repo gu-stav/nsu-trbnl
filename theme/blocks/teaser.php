@@ -3,6 +3,8 @@
   $text = get_field('text');
   $target = get_field('target');
   $button_label = get_field('button_label');
+  $images = get_field('images');
+  $has_images = sizeof($images) > 1 || ( sizeof($images) == 1 && $images[0]['image'] != false );
 
 ?>
 
@@ -19,7 +21,7 @@
     </h2>
   </div>
 
-  <?php if (have_rows('images')): ?>
+  <?php if ($has_images): ?>
     <div class="constraint constraint--wide">
       <?php get_template_part('template-parts/images/grid'); ?>
     </div>
