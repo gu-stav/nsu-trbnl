@@ -1,6 +1,7 @@
 .intro {
   align-items: center;
   display: flex;
+  max-height: 90vh;
 
   &--orientation-portrait {
     flex-direction: row;
@@ -15,13 +16,29 @@
   }
 
   &__image {
-    max-height: 90vh;
+    max-height: 100%;
     object-fit: cover;
   }
 
   &--orientation-portrait &__image {
     max-height: 80vh;
     object-fit: contain;
+  }
+
+  &__image-container {
+    max-height: 100%;
+    position: relative;
+  }
+
+  // Gradient
+  &--orientation-landscape &__image-container::after {
+    background-image: linear-gradient(to bottom, transparent, black);
+    bottom: 0;
+    content: '';
+    height: 20%;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 
   &__content-container {
