@@ -1,15 +1,23 @@
 .columns {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 4rem;
   margin-top: 4rem;
 
-  &__column {
-    padding: 4rem;
-    width: 50%;
+  @include mq($from: tablet) {
+    flex-direction: row;
+  }
 
-    & + & {
-      border-left: 1px solid rgb(128, 128, 128);
+  &__column {
+    @include mq($from: tablet) {
+      padding: 4rem;
+      width: 50%;
+    }
+
+    @include mq($from: tablet) {
+      & + & {
+        border-left: 1px solid rgb(128, 128, 128);
+      }
     }
 
     > *:not(.quote) + *:not(.quote) {

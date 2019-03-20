@@ -8,8 +8,15 @@
     font-size: 0.875rem;
     font-style: normal;
     margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include mq($from: tablet) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__author-info {
@@ -18,9 +25,13 @@
   }
 
   .richtext {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.4;
+
+    @include mq($from: tablet) {
+      font-size: 1.75rem;
+    }
 
     > p {
       display: inline;

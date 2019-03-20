@@ -15,20 +15,29 @@
     &::before {
       background-color: currentColor;
       content: '';
-      height: 2rem;
+      height: 1.7rem;
       left: 0;
       position: absolute;
       top: 0;
       width: 100%;
+
+      @include mq($from: tablet) {
+        height: 2rem;
+      }
     }
 
     .headline {
       background-color: black;
       display: inline-block;
-      max-width: 35rem;
-      padding: 0.15rem 1.5rem;
+      max-width: 75%;
+      padding: 0 1.25rem;
       position: relative;
       z-index: 10;
+
+      @include mq($from: tablet) {
+        max-width: 35rem;
+        padding: 0.15rem 1.5rem;
+      }
     }
   }
 
