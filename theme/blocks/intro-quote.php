@@ -4,7 +4,7 @@
   $count = 0;
 ?>
 
-<div class="intro intro--orientation-landscape">
+<div class="intro intro--with-quote">
   <?php
     while (have_rows('quotes')) :
       the_row();

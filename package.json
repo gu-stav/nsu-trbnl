@@ -14,7 +14,7 @@
     "rollup-plugin-cpy": "^1.1.0"
   },
   "scripts": {
-    "develop": "rollup theme/static/index.js --file theme/.build/index.js --config ./theme/rollup.config.js --format iife --watch"
+    "develop": "rollup theme/static/index.js --file theme/dist/index.js --config ./theme/rollup.config.js --format iife --watch"
   },
   "keywords": [],
   "author": "",

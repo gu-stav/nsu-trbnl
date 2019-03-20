@@ -7,7 +7,7 @@ export default {
       files: [
         './theme/static/fonts/**/*'
       ],
-      dest: './theme/.build/',
+      dest: './theme/dist/',
       options: {
         verbose: true
       }

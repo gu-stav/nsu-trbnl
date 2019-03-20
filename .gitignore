@@ -2,4 +2,4 @@
 .uploads/
 vendor/
 node_modules/
-theme/.build/
+theme/dist/

@@ -12,7 +12,7 @@
     </title>
 
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/.build/index.css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/dist/index.css" />
 
     <?php wp_head(); ?>
   </head>
