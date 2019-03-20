@@ -7,11 +7,13 @@
   $image_src = wp_get_attachment_image_src($image, false);
   $image_height = $image_src[2];
   $image_width = $image_src[1];
+  $image_size = 'full-width';
 
   if ($image_width > $image_height) {
     $image_orientation = 'landscape';
   } else {
     $image_orientation = 'portrait';
+    $image_size = 'half-width';
   }
 
 ?>
@@ -19,7 +21,7 @@
 <div class="intro intro--orientation-<?php echo $image_orientation; ?>">
 
   <div class="intro__image-container">
-    <?php echo wp_get_attachment_image($image, false, false, [
+    <?php echo wp_get_attachment_image($image, $image_size, false, [
       'class' => 'image intro__image'
     ]); ?>
   </div>

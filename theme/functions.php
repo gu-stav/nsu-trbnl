@@ -2,6 +2,7 @@
 
 include 'lib/admin.php';
 include 'lib/blocks.php';
+include 'lib/images.php';
 include 'lib/menu.php';
 
 function get_component($path, array $params = array(), $output = true) {
@@ -24,5 +25,7 @@ function get_current_page_depth() {
 
   return $depth;
 }
+
+
 
 ?>

@@ -8,7 +8,7 @@
 ?>
 
 <div class="intro">
-  <?php echo wp_get_attachment_image($image, false, false, [
+  <?php echo wp_get_attachment_image($image, 'full-width', false, [
     'class' => 'image intro__image'
   ]); ?>
 

@@ -4,7 +4,7 @@
 ?>
 
 <figure class="figure">
-  <?php echo wp_get_attachment_image($image, false, false, [
+  <?php echo wp_get_attachment_image($image, 'half-width', false, [
     'class' => 'image'
   ]); ?>
 
