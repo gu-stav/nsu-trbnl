@@ -11,7 +11,7 @@
 
     [
       'name' => 'intro-quote',
-      'title' => __('Intro mit Zitat'),
+      'title' => __('Intro mit Zitaten'),
       'render_callback'	=> 'acf_block_render_callback',
       'category' 	=> 'common',
       'icon' => 'format-image',
