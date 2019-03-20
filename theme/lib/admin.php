@@ -19,8 +19,6 @@
   }
 
   function admin_toolbar_cleanup($toolbars) {
-    var_dump($toolbars);
-
     $toolbars['Richtext'] = array();
     $toolbars['Richtext'][1] = array('formatselect', 'bold', 'italic', 'link', 'undo', 'redo');
 
