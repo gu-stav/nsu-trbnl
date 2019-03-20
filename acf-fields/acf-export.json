@@ -362,10 +362,10 @@
         "title": "Intro (Zitate)",
         "fields": [
             {
-                "key": "field_5c8a50832870d",
-                "label": "Bild",
-                "name": "image",
-                "type": "image",
+                "key": "field_5c92311796dfa",
+                "label": "Zitate",
+                "name": "quotes",
+                "type": "repeater",
                 "instructions": "",
                 "required": 1,
                 "conditional_logic": 0,
@@ -374,80 +374,58 @@
                     "class": "",
                     "id": ""
                 },
-                "return_format": "id",
-                "preview_size": "large",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5c8a3f7168534",
-                "label": "Zitat",
-                "name": "quote",
-                "type": "text",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5c8a3f7b68535",
-                "label": "Zitat Autor*in",
-                "name": "quote_author",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5c8a3fbc68536",
-                "label": "Zitat Autor*in Info",
-                "name": "quote_author_info",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5c8a3f7b68535",
-                            "operator": "!=empty"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Zitat hinzufügen",
+                "sub_fields": [
+                    {
+                        "key": "field_5c92312d96dfb",
+                        "label": "Bild",
+                        "name": "image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5c92314d96dfc",
+                        "label": "Zitat",
+                        "name": "quote",
+                        "type": "clone",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "clone": [
+                            "group_5c8a40791eacd"
+                        ],
+                        "display": "seamless",
+                        "layout": "block",
+                        "prefix_label": 0,
+                        "prefix_name": 0
+                    }
+                ]
             }
         ],
         "location": [
