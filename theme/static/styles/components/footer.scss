@@ -54,6 +54,14 @@
     }
   }
 
+  &__row:nth-child(1) &__row-content {
+    margin-left: 7.5rem;
+  }
+
+  &__row:nth-child(3) &__row-content {
+    margin-right: -2.5rem;
+  }
+
   &__extended {
     margin-top: 4rem;
     padding-bottom: 4rem;

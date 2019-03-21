@@ -79,4 +79,9 @@
   &-item__hidden-label {
     @include visually-hidden;
   }
+
+  & > .menu-item > a:hover,
+  & > .menu-item > a:focus {
+    text-decoration: underline;
+  }
 }
