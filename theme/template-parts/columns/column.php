@@ -23,3 +23,15 @@
     ]);
   }
 ?>
+
+<?php
+  if (get_row_layout() == 'info') {
+    $title = get_sub_field('title');
+    $text = get_sub_field('text');
+
+    get_component('/template-parts/info/info', [
+      'title' => $title,
+      'text' => $text
+    ]);
+  }
+?>

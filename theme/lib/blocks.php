@@ -79,6 +79,15 @@
       'category' 	=> 'common',
       'icon' => 'arrow-down-alt',
       'keywords' 	=> array('arrow', 'space'),
+    ],
+
+    [
+      'name' => 'info',
+      'title' => __('Info'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'common',
+      'icon' => 'info',
+      'keywords' 	=> array('info'),
     ]
   ];
 
