@@ -447,6 +447,48 @@
         "description": ""
     },
     {
+        "key": "group_5c92618e0e398",
+        "title": "Social Media Navigation",
+        "fields": [
+            {
+                "key": "field_5c9261ac05ae6",
+                "label": "Icon",
+                "name": "icon",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "nav_menu_item",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5c8a4112bb9f3",
         "title": "Teaser",
         "fields": [
@@ -577,6 +619,96 @@
                         "max_height": "",
                         "max_size": "",
                         "mime_types": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5c93c76e89ce3",
+                "label": "Videos",
+                "name": "videos",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 9,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5c93c9ffb795e",
+                        "label": "Vorschaubild",
+                        "name": "preview_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5c93ca2cb795f",
+                        "label": "Youtube Video ID",
+                        "name": "youtube_video_id",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5c93ca3eb7960",
+                        "label": "Caption",
+                        "name": "caption",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5c93ca2cb795f",
+                                    "operator": "!=empty"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": ""
                     }
                 ]
             }
@@ -714,7 +846,14 @@
                         "type": "textarea",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5c8a72d0eb795",
+                                    "operator": "!=empty"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
