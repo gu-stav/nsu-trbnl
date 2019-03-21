@@ -67,3 +67,16 @@
     display: flex;
   }
 }
+
+// Social media menu
+
+.footer .menu {
+  &-item__icon > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &-item__hidden-label {
+    @include visually-hidden;
+  }
+}
