@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;
 
   &::before {
@@ -14,15 +13,5 @@
     top: 0;
     width: 100%;
     z-index: 10;
-  }
-
-  &--has-no-parent {
-    background-color: black;
-    color: white;
-  }
-
-  &--has-parent {
-    background-color: white;
-    color: black;
   }
 }

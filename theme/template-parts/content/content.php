@@ -1,15 +1,10 @@
 <?php
-  $has_parent = get_current_page_depth() >= 2;
 
-  if ($has_parent) {
-    $modifier = 'has-parent';
-  } else {
-    $modifier = 'has-no-parent';
-  }
+  $has_parent = get_current_page_depth() >= 2;
 
 ?>
 
-<main class="content content--<?php echo $modifier; ?>">
+<main class="content">
   <?php if ($has_parent) : ?>
     <h1 class="content__title">
       <?php the_title(); ?>
@@ -17,6 +12,4 @@
   <?php endif; ?>
 
   <?php the_content(); ?>
-
-  <?php get_footer(); ?>
 </main>

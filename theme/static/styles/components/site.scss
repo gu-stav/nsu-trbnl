@@ -1,0 +1,13 @@
+.site {
+  min-height: 100vh;
+
+  &--has-no-parent {
+    background-color: black;
+    color: white;
+  }
+
+  &--has-parent {
+    background-color: white;
+    color: black;
+  }
+}
