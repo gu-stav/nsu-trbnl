@@ -22,6 +22,7 @@
     object-fit: cover;
   }
 
+  &--with-quote &__image,
   &--orientation-portrait &__image {
     max-height: 80vh;
     object-fit: contain;
