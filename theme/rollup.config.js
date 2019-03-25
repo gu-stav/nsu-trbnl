@@ -1,5 +1,7 @@
+import commonjs from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-cpy';
 import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
 
 export default {
   plugins: [
@@ -16,10 +18,14 @@ export default {
     postcss({
       extract: true,
       plugins: []
-    })
+    }),
+
+    resolve(),
+    commonjs()
   ],
 
   output: {
-    name: 'test'
+    file: 'index.js',
+    format: 'iife'
   }
 };

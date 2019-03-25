@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "domready": "^1.0.8",
     "node-sass": "^4.11.0",
     "rollup": "^1.6.0",
+    "rollup-plugin-commonjs": "^9.2.2",
     "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-postcss": "^2.0.3",
     "sass-mq": "^5.0.0"
   },
   "devDependencies": {
-    "rollup-plugin-cpy": "^1.1.0"
+    "rollup-plugin-cpy": "^1.1.0",
+    "rollup-plugin-node-resolve": "^4.0.1"
   },
   "scripts": {
     "develop": "rollup theme/static/index.js --file theme/dist/index.js --config ./theme/rollup.config.js --format iife --watch"
