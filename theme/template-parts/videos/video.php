@@ -5,10 +5,15 @@
 ?>
 
 <figure class="figure figure--is-video">
-  <a href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>">
-    <?php echo wp_get_attachment_image($image, 'half-width', false, [
-      'class' => 'image'
-    ]); ?>
+  <a href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>"
+     data-video-id="<?php echo $video_id; ?>"
+     class="figure__inner-link js-video">
+
+    <?php
+      echo wp_get_attachment_image($image, 'half-width', false, [
+        'class' => 'image'
+      ]);
+    ?>
 
     <figcaption class="figure__caption">
       <div class="figure__caption-container">
@@ -20,4 +25,21 @@
       </svg>
     </figcaption>
   </a>
+
+  <div class="dialog js-dialog">
+    <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+
+    <dialog class="dialog__content">
+      <button type="button" class="dialog__close" data-a11y-dialog-hide aria-label="Dialog schließen">
+        &times;
+      </button>
+
+      <div class="responsive-video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/<?php echo $video_id; ?>?rel=0&autoplay=1&modestbranding=1&showinfo=0"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </dialog>
+  </div>
 </figure>

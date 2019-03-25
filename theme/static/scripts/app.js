@@ -1,5 +1,8 @@
 import domready from 'domready';
 
+import initVideo from './modules/video';
+
 domready(() => {
-  console.log('ready to go');
+  const videos = Array.from(document.querySelectorAll('.js-video'));
+  videos.forEach(video => initVideo(video));
 });

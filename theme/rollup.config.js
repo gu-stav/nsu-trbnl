@@ -33,7 +33,8 @@ const CONFIG = {
 
   output: {
     file: './theme/dist/index.js',
-    format: 'iife'
+    format: 'iife',
+    sourcemap: isProduction ? false : 'inline'
   }
 };
 

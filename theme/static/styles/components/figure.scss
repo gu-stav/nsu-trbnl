@@ -2,6 +2,10 @@
   font-size: 0;
   margin: 0;
 
+  &__inner-link {
+    display: block;
+  }
+
   &__caption {
     color: #9B9B9B;
     font-size: 0.75rem;
