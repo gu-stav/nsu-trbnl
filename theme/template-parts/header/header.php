@@ -1,5 +1,17 @@
 <header class="header">
-  <a href="/" class="header__logo">NSU Komplex aufloesen</a>
+  <?php if (!is_front_page()): ?>
+    <a href="<?php esc_url(home_url('/')); ?>" class="header__logo">
+  <?php else: ?>
+    <span class="header__logo">
+  <?php endif; ?>
+
+    <?php bloginfo('name'); ?>
+
+  <?php if (!is_front_page()): ?>
+    </a>
+  <?php else: ?>
+    </>
+  <?php endif; ?>
 
   <?php
     wp_nav_menu([
