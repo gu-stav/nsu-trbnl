@@ -13,5 +13,14 @@
     margin-right: 5rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
+
+    svg {
+      fill: white;
+      width: 12rem;
+    }
+  }
+
+  &__logo-site-name {
+    @include visually-hidden;
   }
 }
