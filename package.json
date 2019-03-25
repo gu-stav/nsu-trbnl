@@ -10,6 +10,7 @@
     "rollup-plugin-commonjs": "^9.2.2",
     "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^4.0.4",
     "sass-mq": "^5.0.0"
   },
   "devDependencies": {
@@ -17,7 +18,8 @@
     "rollup-plugin-node-resolve": "^4.0.1"
   },
   "scripts": {
-    "develop": "rollup theme/static/index.js --file theme/dist/index.js --config ./theme/rollup.config.js --format iife --watch"
+    "develop": "rollup --config ./theme/rollup.config.js --watch",
+    "build": "NODE_ENV=production rollup --config ./theme/rollup.config.js"
   },
   "keywords": [],
   "author": "",

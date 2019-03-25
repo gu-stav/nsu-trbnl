@@ -2,8 +2,12 @@ import commonjs from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-cpy';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
+import { terser } from "rollup-plugin-terser";
 
-export default {
+const { env } = process;
+const isProduction = env.NODE_ENV === 'production';
+
+const CONFIG = {
   plugins: [
     copy({
       files: [
@@ -17,6 +21,7 @@ export default {
 
     postcss({
       extract: true,
+      minimize: isProduction,
       plugins: []
     }),
 
@@ -24,8 +29,16 @@ export default {
     commonjs()
   ],
 
+  input: './theme/static/index.js',
+
   output: {
-    file: 'index.js',
+    file: './theme/dist/index.js',
     format: 'iife'
   }
 };
+
+if (isProduction) {
+  CONFIG.plugins.push(terser());
+}
+
+export default CONFIG;
