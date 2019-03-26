@@ -20,7 +20,7 @@
 
   function admin_toolbar_cleanup($toolbars) {
     $toolbars['Richtext'] = array();
-    $toolbars['Richtext'][1] = array('formatselect', 'bold', 'italic', 'link', 'undo', 'redo');
+    $toolbars['Richtext'][1] = array('formatselect', 'bold', 'italic', 'link', 'undo', 'redo', 'bfn', 'bfn_note');
 
     return $toolbars;
   }
