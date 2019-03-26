@@ -16,7 +16,7 @@
   <?php if (!is_front_page()): ?>
     </a>
   <?php else: ?>
-    </>
+    </span>
   <?php endif; ?>
 
   <?php
