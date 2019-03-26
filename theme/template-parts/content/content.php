@@ -6,8 +6,10 @@
 
 <main class="content">
   <?php if ($has_parent) : ?>
-    <h1 class="content__title">
-      <?php the_title(); ?>
+    <div class="constraint">
+      <h1 class="content__title">
+        <?php the_title(); ?>
+      </h1>
     </div>
   <?php endif; ?>
 

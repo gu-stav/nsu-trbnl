@@ -10,9 +10,9 @@
   z-index: 20;
 
   &__logo {
+    font-size: 0;
+    line-height: 1;
     margin-right: 5rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
 
     svg {
       fill: white;

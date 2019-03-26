@@ -1,3 +1,11 @@
+@mixin text-preset-h0 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
 @mixin text-preset-h1 {
   font-size: 2.25rem;
   font-weight: 700;

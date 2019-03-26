@@ -6,7 +6,7 @@
   width: 100%;
 
   &__row {
-    background-color: white;
+    background-color: currentColor;
     display: flex;
     justify-content: center;
     flex: 0;
@@ -40,6 +40,7 @@
     }
 
     .menu-item > a {
+      color: currentColor;
       display: block;
       font-size: 1.125rem;
       font-weight: 700;
@@ -52,6 +53,10 @@
     .menu-item + .menu-item {
       margin-left: 1.5rem;
     }
+  }
+
+  &--inverse &__row-content {
+    background-color: white;
   }
 
   &__row:nth-child(1) &__row-content {

@@ -1,4 +1,16 @@
-<footer class="footer">
+<?php
+
+  $has_parent = get_current_page_depth() >= 2;
+
+  if ($has_parent) {
+    $modifier = 'footer--inverse';
+  } else {
+    $modifier = '';
+  }
+
+?>
+
+<footer class="footer <?php echo $modifier; ?>">
   <div class="footer__row">
     <div class="footer__row-content">
       <?php

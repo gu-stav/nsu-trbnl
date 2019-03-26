@@ -4,7 +4,8 @@
   flex-direction: column;
   position: relative;
 
-  &::before {
+  // only show the shadow on black pages
+  .site--has-no-parent &::before {
     background-image: linear-gradient(to bottom, black 2%, transparent 95%);
     content: '';
     height: 10rem;
@@ -13,5 +14,11 @@
     top: 0;
     width: 100%;
     z-index: 10;
+  }
+
+  &__title {
+    @include text-preset-h0;
+
+    margin-top: 5rem;
   }
 }

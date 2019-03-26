@@ -1,6 +1,6 @@
 <header class="header">
   <?php if (!is_front_page()): ?>
-    <a href="<?php esc_url(home_url('/')); ?>" class="header__logo">
+    <a href="<?php echo esc_url(home_url('/')); ?>" class="header__logo">
   <?php else: ?>
     <span class="header__logo">
   <?php endif; ?>
