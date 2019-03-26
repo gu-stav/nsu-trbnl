@@ -39,4 +39,25 @@
   a {
     text-decoration: underline;
   }
+
+  // summary below text
+  span.footnote,
+  // footnote in text
+  sup.footnote {
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    > a {
+      line-height: 1;
+      margin: -0.3rem;
+      padding: 0.3rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
 }
