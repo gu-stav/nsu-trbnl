@@ -5,8 +5,8 @@
   max-height: 90vh;
 
   @include mq($from: tablet) {
-    height: 80vh;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+    min-height: 80vh;
   }
 
   &--orientation-portrait {
