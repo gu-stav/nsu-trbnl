@@ -26,9 +26,13 @@
 
   &__row-content {
     background-color: black;
-    max-width: 40rem;
+    max-width: 70%;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+    @include mq($from: tablet) {
+      max-width: 40rem;
+    }
 
     .menu {
       display: flex;
@@ -42,12 +46,16 @@
     .menu-item > a {
       color: currentColor;
       display: block;
-      font-size: 1.125rem;
+      font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 4px;
       padding-bottom: 0.35rem;
       padding-top: 0.35rem;
       text-transform: uppercase;
+
+      @include mq($from: tablet) {
+        font-size: 1.125rem;
+      }
     }
 
     .menu-item + .menu-item {

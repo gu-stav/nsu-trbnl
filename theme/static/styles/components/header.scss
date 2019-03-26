@@ -5,22 +5,71 @@
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0.5rem;
   position: relative;
   z-index: 20;
+
+  @include mq($from: tablet) {
+    justify-content: center;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 
   &__logo {
     font-size: 0;
     line-height: 1;
-    margin-right: 5rem;
+
+    @include mq($from: tablet) {
+      margin-right: 5rem;
+    }
 
     svg {
       fill: white;
-      width: 10rem;
+      width: 8rem;
+
+      @include mq($from: tablet) {
+        width: 10rem;
+      }
     }
   }
 
   &__logo-site-name {
     @include visually-hidden;
+  }
+
+  &__menu-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__toggle {
+    @include mq($from: tablet) {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      background-color: currentColor;
+      border-bottom: 0.25rem solid white;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  &__toggle-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+
+  &__toggle-checkbox {
+    display: none;
+  }
+
+  &__toggle-checkbox:checked ~ .menu {
+    display: flex;
   }
 }

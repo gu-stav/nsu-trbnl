@@ -19,11 +19,19 @@
     </span>
   <?php endif; ?>
 
-  <?php
-    wp_nav_menu([
-      'theme_location' => 'navigation',
-      'container' => false,
-      'item_spacing' => 'discard'
-    ]);
-  ?>
+  <div class="header__menu-container">
+    <label for="navigation-toggle" class="header__toggle js-navigation-toggle">
+      <span class="header__toggle-label">Menü</span>
+    </label>
+
+    <input type="checkbox" name="navigation-toggle" id="navigation-toggle" class="header__toggle-checkbox" />
+
+    <?php
+      wp_nav_menu([
+        'theme_location' => 'navigation',
+        'container' => false,
+        'item_spacing' => 'discard'
+      ]);
+    ?>
+  </div>
 </header>

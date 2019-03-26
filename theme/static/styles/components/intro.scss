@@ -1,8 +1,13 @@
 .intro {
   align-items: center;
   display: flex;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   max-height: 90vh;
+
+  @include mq($from: tablet) {
+    height: 80vh;
+    margin-bottom: 4rem;
+  }
 
   &--orientation-portrait {
     flex-direction: row;
@@ -48,6 +53,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    z-index: 10;
 
     .quote {
       margin-bottom: 0;
@@ -60,11 +68,11 @@
   }
 
   &--with-quote &__content-container {
-    transform: translateY(-20%);
+    margin-top: -2%;
   }
 
   &--orientation-landscape &__content-container {
-    transform: translateY(-130%);
+    margin-top: -15%;
   }
 
   &--orientation-portrait &__image-container,
