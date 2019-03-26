@@ -108,8 +108,13 @@
 
 .footer .menu {
   &-item__icon > svg {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+
+    @include mq($from: tablet) {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 
   &-item__hidden-label {

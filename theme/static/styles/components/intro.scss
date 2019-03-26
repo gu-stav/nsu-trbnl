@@ -78,6 +78,16 @@
   &--orientation-portrait &__image-container,
   &--orientation-portrait &__content-container {
     flex-basis: 50%;
-    padding: 4rem;
+    padding: 1rem;
+
+    @include mq($from: tablet) {
+      padding: 4rem;
+    }
+  }
+
+  &--orientation-portrait .headline--as-h1 {
+    @include mq($until: tablet) {
+      font-size: 1.75rem;
+    }
   }
 }
