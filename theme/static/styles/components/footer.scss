@@ -26,12 +26,14 @@
 
   &__row-content {
     background-color: black;
-    max-width: 70%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    max-width: 60%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     @include mq($from: tablet) {
       max-width: 40rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     .menu {
