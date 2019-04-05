@@ -4,6 +4,11 @@
   flex-direction: column;
   position: relative;
 
+  ::selection {
+    background-color: white;
+    color: black;
+  }
+
   // only show the shadow on black pages
   .site--has-no-parent &::before {
     background-image: linear-gradient(to bottom, black 2%, transparent 95%);
@@ -20,5 +25,9 @@
     @include text-preset-h0;
 
     margin-top: 5rem;
+  }
+
+  & > *:not(.intro):first-child {
+    margin-top: 4rem;
   }
 }
