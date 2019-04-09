@@ -38,6 +38,9 @@ function acf_register_block_type( $block ) {
 		));
 	}
 	
+	// Register action.
+	add_action( 'enqueue_block_editor_assets', 'acf_enqueue_block_scripts' );
+	
 	// Return block.
 	return $block;
 }
@@ -379,9 +382,6 @@ function acf_enqueue_block_scripts() {
 	wp_enqueue_script('acf-blocks', acf_get_url("pro/assets/js/acf-pro-blocks{$min}.js"), array('acf-input', 'wp-blocks'), ACF_VERSION, true );
 }
 
-// Register action.
-add_action( 'enqueue_block_editor_assets', 'acf_enqueue_block_scripts' );
-
 /**
  * acf_ajax_fetch_block
  *
@@ -495,7 +495,13 @@ acf_register_ajax( 'fetch-block', 'acf_ajax_fetch_block' );
 function acf_parse_save_blocks( $text = '' ) {
 	
 	// Search text for dynamic blocks and modify attrs.
-	return preg_replace_callback( '/<!--\s+wp:(?P<name>[\S]+)\s+(?P<attrs>{[\S\s]+?})\s+\/-->/', 'acf_parse_save_blocks_callback', $text );
+	return addslashes(
+		preg_replace_callback(
+			'/<!--\s+wp:(?P<name>[\S]+)\s+(?P<attrs>{[\S\s]+?})\s+\/-->/',
+			'acf_parse_save_blocks_callback',
+			stripslashes( $text )
+		)
+	);
 }
 
 // Hook into saving process.
@@ -516,7 +522,7 @@ function acf_parse_save_blocks_callback( $matches ) {
 	
 	// Defaults
 	$name = isset($matches['name']) ? $matches['name'] : '';
-	$attrs = isset($matches['attrs']) ? json_decode( wp_unslash($matches['attrs']), true) : '';
+	$attrs = isset($matches['attrs']) ? json_decode( $matches['attrs'], true) : '';
 	
 	// Bail early if missing data or not an ACF Block.
 	if( !$name || !$attrs || !acf_has_block_type($name) ) {
@@ -530,7 +536,8 @@ function acf_parse_save_blocks_callback( $matches ) {
 	}
 	
 	// Prevent wp_targeted_link_rel from corrupting JSON.
-	add_filter('wp_targeted_link_rel', '__return_false');
+	remove_filter( 'content_save_pre', 'wp_filter_post_kses' );
+	remove_filter( 'content_save_pre', 'wp_targeted_link_rel' );
 	
 	/**
 	 * Filteres the block attributes before saving.
@@ -543,5 +550,5 @@ function acf_parse_save_blocks_callback( $matches ) {
 	$attrs = apply_filters( 'acf/pre_save_block', $attrs );
 	
 	// Return new comment
-	return '<!-- wp:' . $name . ' ' . wp_slash( json_encode( $attrs, JSON_PRETTY_PRINT ) ) . ' /-->';
+	return '<!-- wp:' . $name . ' ' . json_encode( $attrs, JSON_PRETTY_PRINT ) . ' /-->';
 }

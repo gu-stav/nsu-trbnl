@@ -1,5 +1,5 @@
 <blockquote class="quote">
-  <div class="richtext richtext--is-centered">
+  <div class="richtext">
     »<?php echo $text; ?>«
   </div>
 

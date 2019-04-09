@@ -12,10 +12,6 @@
     padding-right: 0;
   }
 
-  &--is-centered {
-    text-align: center;
-  }
-
   > *:first-child {
     margin-top: 0;
   }
@@ -38,6 +34,12 @@
 
   a {
     text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: black;
+    }
   }
 
   // summary below text

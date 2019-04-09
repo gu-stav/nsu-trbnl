@@ -7,4 +7,10 @@
   line-height: 1;
   padding: 1rem 2.5rem;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: black;
+  }
 }

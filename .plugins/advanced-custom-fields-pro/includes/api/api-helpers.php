@@ -572,7 +572,7 @@ function acf_parse_type( $v ) {
 		$v = trim( $v );
 		
 		// Convert int strings to int ("123" = 123).
-		if( is_numeric($v) && strpos($v, '.') === false ) {
+		if( is_numeric($v) && strval(intval($v)) === $v ) {
 			$v = intval( $v );
 		}
 	}

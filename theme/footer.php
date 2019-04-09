@@ -37,6 +37,7 @@
 
   <div class="footer__row">
     <div class="footer__row-content">
+      <p class="footer__partner"></p>
       <p class="footer__partner">Ein Kooperationsprojekte mit der Rosa Luxemburg Stiftung</p>
     </div>
   </div>

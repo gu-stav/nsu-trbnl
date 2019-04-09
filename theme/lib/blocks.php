@@ -7,6 +7,7 @@
       'category' 	=> 'common',
       'icon' => 'format-image',
       'keywords' 	=> array('hero', 'image', 'intro'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -16,6 +17,7 @@
       'category' 	=> 'common',
       'icon' => 'format-image',
       'keywords' 	=> array('hero', 'image', 'intro', 'quote'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -25,6 +27,7 @@
       'category' 	=> 'common',
       'icon' => 'playlist-video',
       'keywords' 	=> array('video', 'grid'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -34,6 +37,7 @@
       'category' 	=> 'common',
       'icon' => 'images-alt2',
       'keywords' 	=> array('image', 'grid'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -43,6 +47,7 @@
       'category' 	=> 'common',
       'icon' => 'layout',
       'keywords' 	=> array('column', 'grid'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -52,6 +57,7 @@
       'category' 	=> 'common',
       'icon' => 'media-text',
       'keywords' 	=> array('teaser'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -61,6 +67,7 @@
       'category' 	=> 'common',
       'icon' => 'text',
       'keywords' 	=> array('text'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -70,6 +77,7 @@
       'category' 	=> 'common',
       'icon' => 'format-quote',
       'keywords' 	=> array('quote', 'blockquote'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -79,6 +87,7 @@
       'category' 	=> 'common',
       'icon' => 'arrow-down-alt',
       'keywords' 	=> array('arrow', 'space'),
+      'mode'	=> 'auto',
     ],
 
     [
@@ -88,6 +97,7 @@
       'category' 	=> 'common',
       'icon' => 'info',
       'keywords' 	=> array('info'),
+      'mode'	=> 'auto',
     ]
   ];
 
