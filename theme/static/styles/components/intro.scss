@@ -11,6 +11,17 @@
 
   &--orientation-portrait {
     flex-direction: row;
+    padding-top: 1rem;
+
+    @include mq($from: tablet) {
+      padding-top: 8rem;
+    }
+  }
+
+  @include mq($from: tablet) {
+    &--orientation-portrait {
+      min-height: auto;
+    }
   }
 
   &--with-quote,
@@ -29,7 +40,7 @@
 
   &--with-quote &__image,
   &--orientation-portrait &__image {
-    max-height: 80vh;
+    max-height: 60vh;
     object-fit: contain;
   }
 
@@ -75,13 +86,22 @@
     margin-top: -15%;
   }
 
-  &--orientation-portrait &__image-container,
   &--orientation-portrait &__content-container {
     flex-basis: 50%;
     padding: 1rem;
 
     @include mq($from: tablet) {
       padding: 4rem;
+    }
+  }
+
+  &--orientation-portrait &__image-container {
+    border-right: 1px solid $color-grey;
+    flex-basis: 50%;
+    padding: 0 1rem 1rem 1rem;
+
+    @include mq($from: tablet) {
+      padding: 0 4rem 4rem 4rem;
     }
   }
 

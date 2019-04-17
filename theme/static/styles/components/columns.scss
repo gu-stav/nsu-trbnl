@@ -16,7 +16,7 @@
 
     @include mq($from: tablet) {
       & + & {
-        border-left: 1px solid rgb(128, 128, 128);
+        border-left: 1px solid $color-grey;
       }
     }
 
