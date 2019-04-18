@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "a11y-dialog": "^5.2.0",
     "domready": "^1.0.8",
     "node-sass": "^4.11.0",
     "rollup": "^1.10.0",

@@ -25,21 +25,4 @@
       </svg>
     </figcaption>
   </a>
-
-  <div class="dialog js-dialog">
-    <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-
-    <dialog class="dialog__content">
-      <button type="button" class="dialog__close" data-a11y-dialog-hide aria-label="Dialog schließen">
-        &times;
-      </button>
-
-      <div class="responsive-video">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/<?php echo $video_id; ?>?rel=0&autoplay=1&modestbranding=1&showinfo=0"
-          frameborder="0"
-          allowfullscreen></iframe>
-      </div>
-    </dialog>
-  </div>
 </figure>

@@ -20,18 +20,29 @@
   <?php endif; ?>
 
   <div class="header__menu-container">
-    <label for="navigation-toggle" class="header__toggle js-navigation-toggle">
-      <span class="header__toggle-label">Menü</span>
-    </label>
-
     <input type="checkbox" name="navigation-toggle" id="navigation-toggle" class="header__toggle-checkbox" />
 
-    <?php
-      wp_nav_menu([
-        'theme_location' => 'navigation',
-        'container' => false,
-        'item_spacing' => 'discard'
-      ]);
-    ?>
+    <div class="menu-container">
+      <?php
+        wp_nav_menu([
+          'theme_location' => 'navigation',
+          'container' => false,
+          'item_spacing' => 'discard'
+        ]);
+      ?>
+    </div>
+
+    <label for="navigation-toggle" class="header__toggle js-navigation-toggle">
+
+      <svg aria-hidden="true" focusable="false" class="header__toggle-times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+      </svg>
+
+      <svg aria-hidden="true" focusable="false" class="header__toggle-bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+      </svg>
+
+      <span class="header__toggle-label">Menü</span>
+    </label>
   </div>
 </header>

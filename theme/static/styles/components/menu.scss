@@ -1,13 +1,26 @@
 .header .menu {
-  display: none;
   padding: 0 1rem;
+  display: flex;
 
-  @include mq($from: tablet) {
-    display: flex;
+  @include mq($until: tablet) {
+    &-container {
+      background-color: white;
+      color: black;
+      display: none;
+      flex-direction: column;
+      max-width: 75vw;
+      min-height: 100vh;
+      padding: 3rem 0.25rem 0 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+    }
   }
 
   .sub-menu {
     display: flex;
+    width: 100%;
   }
 
   &,
@@ -28,7 +41,10 @@
 
   a {
     color: currentColor;
-    white-space: nowrap;
+
+    @include mq($from: tablet) {
+      white-space: nowrap;
+    }
   }
 
   > * + * {
@@ -37,25 +53,41 @@
     }
   }
 
+  .menu-item {
+    @include mq($until: tablet) {
+      text-align: right;
+      width: 100%;
+    }
+  }
+
   & > .menu-item > a {
     display: inline-block;
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 2px;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 0.35rem;
+    padding-top: 1.5rem;
     position: relative;
     text-transform: uppercase;
+
+    @include mq($from: tablet) {
+      font-weight: 400;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
   }
 
   & > .current-page-ancestor > a::after {
-    background-color: currentColor;
-    bottom: -6px;
-    content: '';
-    height: 12px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
+    @include mq($from: tablet) {
+      background-color: currentColor;
+      bottom: -6px;
+      content: '';
+      height: 12px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+    }
   }
 
   .sub-menu {
