@@ -29,7 +29,11 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+
+    @include mq($from: tablet) {
+      justify-content: space-around;
+    }
   }
 
   &__logo {
@@ -61,6 +65,11 @@
   &__menu-container {
     display: flex;
     flex-direction: row;
+
+    @include mq($until: tablet) {
+      align-self: flex-end;
+      margin-left: auto;
+    }
   }
 
   &__toggle {
