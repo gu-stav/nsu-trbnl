@@ -40,14 +40,6 @@
     font-size: 0;
     line-height: 1;
 
-    @include mq($from: tablet) {
-      margin-right: 2rem;
-    }
-
-    @include mq($from: desktop) {
-      margin-right: 5rem;
-    }
-
     svg {
       fill: white;
       width: 8rem;
