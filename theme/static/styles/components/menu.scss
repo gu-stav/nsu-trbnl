@@ -2,6 +2,11 @@
   padding: 0 1rem;
   display: flex;
 
+  @include mq($from: tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   @include mq($until: tablet) {
     &-container {
       animation-duration: 200ms;
@@ -23,6 +28,8 @@
 
   .sub-menu {
     display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
     width: 100%;
   }
 
@@ -37,7 +44,6 @@
 
     @include mq($from: tablet) {
       flex-direction: row;
-      flex-wrap: wrap;
       justify-content: center;
     }
   }
@@ -52,6 +58,10 @@
 
   > * + * {
     @include mq($from: tablet) {
+      margin-left: 1rem;
+    }
+
+    @include mq($from: desktop) {
       margin-left: 2rem;
     }
   }
@@ -67,9 +77,14 @@
     text-transform: uppercase;
 
     @include mq($from: tablet) {
+      font-size: 0.9rem;
       font-weight: 400;
       padding-bottom: 1rem;
       padding-top: 1rem;
+    }
+
+    @include mq($from: desktop) {
+      font-size: 1.1rem;
     }
   }
 
@@ -86,33 +101,46 @@
     }
   }
 
-  .sub-menu {
+  .sub-menu-container {
     padding: 0;
 
     @include mq($from: tablet) {
       background-color: black;
       border-bottom: 1px solid white;
       display: none;
+      justify-content: center;
       left: 0;
-      padding: 1.5rem;
+      padding: 1rem;
       position: absolute;
       top: calc(100% + 1px);
       width: 100%;
     }
 
-    @include mq($from: tablet) {
-      > * + *::before {
-        content: '–';
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
+    @include mq($from: desktop) {
+      padding: 1.5rem;
     }
+  }
 
+  .sub-menu {
     > * > a {
       font-size: 1rem;
 
       @include mq($from: tablet) {
-        font-size: 1.5rem;
+        font-size: 1rem;
+      }
+
+      @include mq($from: desktop) {
+        font-size: 1.35rem;
+      }
+    }
+
+    > * + * {
+      @include mq($from: tablet) {
+        margin-left: 2rem;
+      }
+
+      @include mq($from: desktop) {
+        margin-left: 2.5rem;
       }
     }
 
@@ -126,8 +154,9 @@
     }
   }
 
-  & > .menu-item:focus > .sub-menu,
-  & > .menu-item:hover > .sub-menu {
+  & > .menu-item:focus > .sub-menu-container,
+  & > .menu-item:hover > .sub-menu-container,
+  & > .menu-item.current-page-parent > .sub-menu-container {
     display: flex;
   }
 }

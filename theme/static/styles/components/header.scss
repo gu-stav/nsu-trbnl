@@ -15,7 +15,6 @@
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding: 0.5rem;
   position: relative;
   z-index: 20;
@@ -26,11 +25,22 @@
     padding-top: 0;
   }
 
+  > .constraint {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &__logo {
     font-size: 0;
     line-height: 1;
 
     @include mq($from: tablet) {
+      margin-right: 2rem;
+    }
+
+    @include mq($from: desktop) {
       margin-right: 5rem;
     }
 

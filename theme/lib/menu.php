@@ -28,6 +28,18 @@
     return $items;
   }
 
+  class Navigation_Walker extends Walker_Nav_Menu {
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='sub-menu-container'><div class='constraint constraint--wide'><ul class='sub-menu'>\n";
+    }
+
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div></div>\n";
+    }
+  }
+
   add_action( 'init', 'menu_register' );
   add_action( 'widgets_init', 'menu_footer_widgets' );
 
