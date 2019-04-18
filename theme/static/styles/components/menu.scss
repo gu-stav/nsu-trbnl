@@ -56,16 +56,6 @@
     }
   }
 
-  > * + * {
-    @include mq($from: tablet) {
-      margin-left: 1rem;
-    }
-
-    @include mq($from: desktop) {
-      margin-left: 2rem;
-    }
-  }
-
   & > .menu-item > a {
     display: inline-block;
     font-size: 1rem;
@@ -79,12 +69,13 @@
     @include mq($from: tablet) {
       font-size: 0.9rem;
       font-weight: 400;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
+      padding: 1rem 0.5rem;
     }
 
     @include mq($from: desktop) {
       font-size: 1.1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -155,8 +146,7 @@
   }
 
   & > .menu-item:focus > .sub-menu-container,
-  & > .menu-item:hover > .sub-menu-container,
-  & > .menu-item.current-page-parent > .sub-menu-container {
+  & > .menu-item:hover > .sub-menu-container {
     display: flex;
   }
 }
