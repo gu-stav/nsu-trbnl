@@ -27,6 +27,7 @@
   &--with-quote,
   &--orientation-landscape {
     flex-direction: column;
+    text-shadow: 0 0 0.35rem rgba(0, 0, 0, .6);
   }
 
   &__subtitle {
