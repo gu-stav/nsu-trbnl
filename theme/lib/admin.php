@@ -31,13 +31,17 @@
     return $settings;
   }
 
+  function admin_setup_editor_styles() {
+    add_theme_support('editor-styles');
+
+    add_editor_style('./style-editor.css');
+    add_editor_style('./dist/index.css');
+  }
+
   add_filter('login_redirect', 'admin_login_redirect', 10, 3);
   add_action('admin_menu', 'admin_cleanup_menu');
   add_filter('acf/fields/wysiwyg/toolbars' , 'admin_toolbar_cleanup');
   add_filter('tiny_mce_before_init', 'admin_tinymce_formatselect');
 
-  add_editor_style(get_template_directory_uri() . '/style-editor.css');
-  add_editor_style(get_template_directory_uri() . '/dist/index.css');
-
-  add_theme_support( 'editor-styles' );
+  add_action( 'after_setup_theme', 'admin_setup_editor_styles' );
 ?>

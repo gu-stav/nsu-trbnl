@@ -3,6 +3,12 @@ body {
   color: white;
 }
 
+/* Richtext editor background */
+body.mce-content-body {
+  background-color: white;
+  color: black;
+}
+
 .wp-block {
   max-width: 1024px;
 }
@@ -15,7 +21,14 @@ h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
   color: inherit;
+}
+
+/* Title */
+
+.editor-post-title__input,
+.editor-post-title__block {
+  color: inherit;
+  font-family: 'Poppins';
 }
