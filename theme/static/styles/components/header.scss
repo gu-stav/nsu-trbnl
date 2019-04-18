@@ -1,3 +1,13 @@
+@keyframes fade-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .header {
   align-items: center;
   background-color: black;
@@ -45,7 +55,7 @@
 
   &__toggle {
     line-height: 1;
-    margin-right: 0.75rem;
+    margin-right: 0.25rem;
     position: relative;
     user-select: none;
     z-index: 20;
@@ -76,11 +86,8 @@
   }
 
   &__toggle-checkbox:checked ~ .menu-container {
+    animation-name: fade-in;
     display: flex;
-  }
-
-  &__toggle-checkbox:checked ~ &__toggle {
-    color: black;
   }
 
   &__toggle-checkbox:not(:checked) ~ &__toggle > &__toggle-bars {

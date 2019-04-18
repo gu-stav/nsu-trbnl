@@ -13,12 +13,16 @@
   .site--has-no-parent &::before {
     background-image: linear-gradient(to bottom, black 2%, transparent 95%);
     content: '';
-    height: 10rem;
+    height: 3rem;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
+
+    @include mq($from: tablet) {
+      height: 10rem;
+    }
   }
 
   &__title {

@@ -4,15 +4,18 @@
 
   @include mq($until: tablet) {
     &-container {
+      animation-duration: 200ms;
+      animation-fill-mode: both;
+      animation-timing-function: ease;
       background-color: white;
       color: black;
       display: none;
       flex-direction: column;
-      max-width: 75vw;
+      left: 0;
+      max-width: 85vw;
       min-height: 100vh;
-      padding: 3rem 0.25rem 0 1.5rem;
+      padding: 0 1.5rem 0 0.5rem;
       position: absolute;
-      right: 0;
       top: 0;
       z-index: 10;
     }
@@ -50,13 +53,6 @@
   > * + * {
     @include mq($from: tablet) {
       margin-left: 2rem;
-    }
-  }
-
-  .menu-item {
-    @include mq($until: tablet) {
-      text-align: right;
-      width: 100%;
     }
   }
 

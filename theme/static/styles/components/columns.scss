@@ -9,6 +9,8 @@
   }
 
   &__column {
+    position: relative;
+
     @include mq($from: tablet) {
       padding: 4rem;
       width: 50%;
@@ -17,6 +19,15 @@
     @include mq($from: tablet) {
       & + & {
         border-left: 1px solid $color-grey;
+
+        &::after {
+          @include arrow;
+
+          left: 0;
+          position: absolute;
+          top: calc(100% - 2px);
+          transform: translateX(calc(-50% - 0.04rem));
+        }
       }
     }
 

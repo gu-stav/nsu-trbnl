@@ -31,7 +31,7 @@
       <?php echo $title ?>
 
       <?php if($subtitle): ?>
-        <small class="intro__subtitle headline headline--as-h2">
+        <small class="intro__subtitle">
           <?php echo $subtitle; ?>
         </small>
       <?php endif; ?>

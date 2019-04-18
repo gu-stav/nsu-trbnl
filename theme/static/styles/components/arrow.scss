@@ -18,20 +18,17 @@
       left: 0;
       position: absolute;
       top: 0;
-      transform: translateX(-0.275rem);
+      transform: translateX(-0.25rem);
       width: 0.6rem;
     }
 
     &::after {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 13"><path fill="' + $color-grey + '" d="M5.5 10.1l3.56-6.34a.5.5 0 0 1 .88.5l-4.5 8-.44.77-.44-.78-4.5-8a.5.5 0 0 1 .88-.49L4.5 10.1V.5a.5.5 0 1 1 1 0v9.6z"/></svg>');
-      background-repeat: no-repeat;
-      content: '';
-      height: 1rem;
+      @include arrow;
+
       left: 0;
       position: absolute;
       top: calc(100% - 2px);
       transform: translateX(calc(-50% + 0.0252rem));
-      width: 0.8rem;
     }
   }
 }

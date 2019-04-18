@@ -29,12 +29,14 @@
     .headline {
       background-color: black;
       display: inline-block;
+      height: 1.7rem;
       max-width: 60%;
       padding: 0 0.75rem;
       position: relative;
       z-index: 10;
 
       @include mq($from: tablet) {
+        height: 2.12rem;
         max-width: 35rem;
         padding: 0 1.5rem 0.15rem 1.5rem;
       }

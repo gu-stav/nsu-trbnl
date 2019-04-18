@@ -30,7 +30,17 @@
   }
 
   &__subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    line-height: 1.4;
     margin-top: 1rem;
+
+    @include mq($from: tablet) {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+    }
   }
 
   &__image {
@@ -99,15 +109,25 @@
     border-right: 1px solid $color-grey;
     flex-basis: 50%;
     padding: 0 1rem 1rem 1rem;
+    position: relative;
 
     @include mq($from: tablet) {
       padding: 0 4rem 4rem 4rem;
+
+      &::after {
+        @include arrow;
+
+        position: absolute;
+        right: 0;
+        top: calc(100% - 2px);
+        transform: translateX(calc(50% + 0.05rem));
+      }
     }
   }
 
   &--orientation-portrait .headline--as-h1 {
     @include mq($until: tablet) {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
     }
   }
 }

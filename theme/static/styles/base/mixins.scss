@@ -7,16 +7,21 @@
 }
 
 @mixin text-preset-h1 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
+
+  @include mq($from: tablet) {
+    font-size: 2.25rem;
+  }
 }
 
 @mixin text-preset-h2 {
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 1px;
+  line-height: 1.2;
   text-transform: uppercase;
 
   @include mq($from: tablet) {
@@ -46,6 +51,14 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+@mixin arrow {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 13"><path fill="' + $color-grey + '" d="M5.5 10.1l3.56-6.34a.5.5 0 0 1 .88.5l-4.5 8-.44.77-.44-.78-4.5-8a.5.5 0 0 1 .88-.49L4.5 10.1V.5a.5.5 0 1 1 1 0v9.6z"/></svg>');
+  background-repeat: no-repeat;
+  content: '';
+  height: 1rem;
+  width: 0.8rem;
 }
 
 @import '~sass-mq';
