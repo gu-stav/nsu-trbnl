@@ -5,7 +5,6 @@
   max-height: 90vh;
 
   @include mq($from: tablet) {
-    margin-bottom: 6rem;
     min-height: 80vh;
   }
 
