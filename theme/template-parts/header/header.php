@@ -20,7 +20,7 @@
       </span>
     <?php endif; ?>
 
-    <div class="header__menu-container">
+    <div class="header__menu-container js-menu">
       <input type="checkbox" name="navigation-toggle" id="navigation-toggle" class="header__toggle-checkbox" />
 
       <div class="menu-container">

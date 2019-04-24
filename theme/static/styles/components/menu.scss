@@ -110,6 +110,10 @@
     @include mq($from: desktop) {
       padding: 1.5rem;
     }
+
+    &--is-open {
+      display: flex;
+    }
   }
 
   .sub-menu {
