@@ -98,6 +98,16 @@
       'icon' => 'info',
       'keywords' 	=> array('info'),
       'mode'	=> 'auto',
+    ],
+
+    [
+      'name' => 'subtitle',
+      'title' => __('Untertitel'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'common',
+      'icon' => 'info',
+      'keywords' 	=> array('editor-insertmore'),
+      'mode'	=> 'auto',
     ]
   ];
 
