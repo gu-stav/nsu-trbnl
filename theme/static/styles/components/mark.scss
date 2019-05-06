@@ -3,9 +3,9 @@
   margin-top: 2rem;
 
   &__text {
-    background-color: black;
+    background-color: currentColor;
     box-decoration-break: clone;
-    color: white;
+    color: black;
     display: inline;
     font-size: 1.3rem;
     font-style: normal;
@@ -13,5 +13,9 @@
     letter-spacing: 0.025rem;
     line-height: 2.1;
     padding: 0.25rem 0.5rem;
+
+    .site--has-parent & {
+      color: white;
+    }
   }
 }
