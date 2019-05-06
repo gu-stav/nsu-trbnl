@@ -26,8 +26,9 @@
 
   &--with-quote,
   &--orientation-landscape {
+    @include text-shadow;
+
     flex-direction: column;
-    text-shadow: 0 0 0.35rem rgba(0, 0, 0, .6);
   }
 
   &__subtitle {
@@ -94,7 +95,7 @@
   }
 
   &--with-quote &__content-container {
-    margin-top: -2%;
+    margin-top: -3.5rem;
   }
 
   &--orientation-landscape &__content-container {
@@ -102,22 +103,33 @@
   }
 
   &--orientation-portrait &__content-container {
-    flex-basis: 50%;
-    padding: 1rem;
+    padding-left: 0;
+    padding-right: 1rem;
+
+    @include mq($until: tablet) {
+      @include text-shadow;
+
+      align-self: flex-end;
+      flex: 1 0 75%;
+      margin-bottom: 1.5rem;
+      margin-left: -50%;
+      width: 75%;
+    }
 
     @include mq($from: tablet) {
+      flex-basis: 50%;
       padding: 4rem;
     }
   }
 
   &--orientation-portrait &__image-container {
-    border-right: 1px solid $color-grey;
-    flex-basis: 50%;
-    padding: 0 1rem 1rem 1rem;
+    flex: 1 0 75%;
     position: relative;
 
     @include mq($from: tablet) {
-      padding: 0 4rem 4rem 4rem;
+      border-right: 1px solid $color-grey;
+      flex-basis: 50%;
+      padding: 1rem 4rem 4rem 4rem;
 
       &::after {
         @include arrow;
@@ -133,6 +145,7 @@
   &--orientation-portrait .headline--as-h1 {
     @include mq($until: tablet) {
       font-size: 1.25rem;
+      text-align: right;
     }
   }
 }

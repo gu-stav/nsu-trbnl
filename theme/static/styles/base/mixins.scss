@@ -73,6 +73,10 @@
   line-height: 1.25;
 }
 
+@mixin text-shadow {
+  text-shadow: 0 0 0.35rem rgba(0, 0, 0, .6);
+}
+
 @mixin visually-hidden {
   border: 0;
   clip-path: rect(0, 0, 0, 0);
