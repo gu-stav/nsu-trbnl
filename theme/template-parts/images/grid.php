@@ -1,6 +1,11 @@
 <?php
 
-  $images = get_field('images');
+  // it's possible to pass in the items through get_component
+  if ($items) {
+    $images = $items;
+  } else {
+    $images = get_field('images');
+  }
 
 ?>
 

@@ -22,16 +22,12 @@
       'author_info' => $author_info
     ]);
   }
-?>
 
-<?php
-  if (get_row_layout() == 'info') {
-    $title = get_sub_field('title');
-    $text = get_sub_field('text');
+  if (get_row_layout() == 'images') {
+    $images = get_sub_field('images');
 
-    get_component('/template-parts/info/info', [
-      'title' => $title,
-      'text' => $text
+    get_component('/template-parts/images/grid', [
+      'items' => $images
     ]);
   }
 ?>
