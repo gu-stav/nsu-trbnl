@@ -118,6 +118,16 @@
       'icon' => 'info',
       'keywords' 	=> array('align-center'),
       'mode'	=> 'auto',
+    ],
+
+    [
+      'name' => 'human-entity',
+      'title' => __('Person/ Gruppe'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'common',
+      'icon' => 'info',
+      'keywords' 	=> array('businessman'),
+      'mode'	=> 'auto',
     ]
   ];
 
