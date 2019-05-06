@@ -14,15 +14,18 @@
         'class' => 'image'
       ]);
     ?>
-
-    <figcaption class="figure__caption">
-      <div class="figure__caption-container">
-        <?php echo $caption; ?>
-      </div>
-
-      <svg aria-hidden="true" focusable="false" class="figure__play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path>
-      </svg>
-    </figcaption>
   </a>
+
+  <figcaption class="figure__caption">
+    <div class="figure__caption-container">
+      <?php echo $caption; ?>
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>" class="figure__play" rel="nofollow">
+      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="31.3" fill="currentColor" stroke="currentColor" stroke-width="1.5" class="figure__play-svg-circle" />
+        <path fill="#000" d="M23.3 49.5L46.5 32 23.3 14.5z" class="figure__play-svg-triangle" />
+      </svg>
+    </a>
+  </figcaption>
 </figure>

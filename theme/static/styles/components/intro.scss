@@ -24,6 +24,10 @@
     }
   }
 
+  &--with-quote {
+    margin-top: 1.5rem;
+  }
+
   &--with-quote,
   &--orientation-landscape {
     @include text-shadow;
@@ -109,9 +113,7 @@
     @include mq($until: tablet) {
       @include text-shadow;
 
-      align-self: flex-end;
       flex: 1 0 75%;
-      margin-bottom: 1.5rem;
       margin-left: -50%;
       width: 75%;
     }
@@ -139,13 +141,6 @@
         top: calc(100% - 2px);
         transform: translateX(calc(50% + 0.05rem));
       }
-    }
-  }
-
-  &--orientation-portrait .headline--as-h1 {
-    @include mq($until: tablet) {
-      font-size: 1.25rem;
-      text-align: right;
     }
   }
 }

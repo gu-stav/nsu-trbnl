@@ -4,24 +4,26 @@
 
   &__inner-link {
     display: block;
+    overflow: hidden;
+  }
 
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+  &__inner-link:hover > .image,
+  &__inner-link:focus > .image {
+    transform: scale(1.05);
+  }
+
+  &--is-video .image {
+    transition: transform 300ms ease-in-out;
   }
 
   &__caption {
     @include text-preset-caption;
 
-    color: #9B9B9B;
-    margin-top: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    color: $color-grey;
+    margin: 0.5rem;
 
     @include mq($from: tablet) {
-      padding-left: 0;
-      padding-right: 0;
+      margin-top: 0.75rem;
     }
   }
 
@@ -31,14 +33,32 @@
   }
 
   &--is-video &__caption-container {
-    padding-right: 1rem;
+    margin-right: 0.5rem;
   }
 
   &__play {
+    color: white;
     flex: 0 0 auto;
-    height: 2rem;
+    height: 3rem;
     justify-self: flex-end;
     margin-left: auto;
-    width: 2rem;
+    transform: translateY(-60%);
+    width: 3rem;
+
+    @include mq($from: tablet) {
+      height: 4.5rem;
+      margin-right: 2.5rem;
+      width: 4.5rem;
+    }
+  }
+
+  &__play:hover &__play-svg-triangle,
+  &__Play:focus &__play-svg-triangle {
+    fill: white;
+  }
+
+  &__play:hover &__play-svg-circle,
+  &__Play:focus &__play-svg-circle {
+    fill: black;
   }
 }
