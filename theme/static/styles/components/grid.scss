@@ -1,6 +1,6 @@
 .grid {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 2rem;
@@ -9,6 +9,7 @@
   padding-right: 0.5rem;
 
   @include mq($from: tablet) {
+    flex-direction: row;
     margin-bottom: 4rem;
     margin-top: 4rem;
     padding-left: 0;
@@ -23,6 +24,13 @@
 
   &--items-1 &__item {
     flex-basis: 100%;
+  }
+
+  // An exception: in case there are two items, keep the horizontal style
+  &--items-2 {
+    @include mq($until: tablet) {
+      flex-direction: row;
+    }
   }
 
   &--items-2 &__item,
