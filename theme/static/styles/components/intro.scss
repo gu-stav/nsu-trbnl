@@ -85,7 +85,11 @@
     }
 
     .quote .richtext {
-      font-size: 2.06rem;
+      font-size: 1.5rem;
+
+      @include mq($from: tablet) {
+        font-size: 2.06rem;
+      }
     }
   }
 

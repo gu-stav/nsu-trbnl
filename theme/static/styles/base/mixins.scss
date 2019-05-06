@@ -1,9 +1,13 @@
 @mixin text-preset-h0 {
-  font-size: 3.25rem;
+  font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
   line-height: 1.1;
   text-align: center;
+
+  @include mq($from: tablet) {
+    font-size: 3.25rem;
+  }
 }
 
 @mixin text-preset-h1 {
@@ -40,6 +44,33 @@
   font-size: 1.125rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@mixin text-preset-text {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+
+  @include mq($from: tablet) {
+    font-size: 1.3125rem;
+    line-height: 1.6;
+  }
+}
+
+@mixin text-preset-small {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+
+  @include mq($from: tablet) {
+    font-size: 1.125rem;
+  }
+}
+
+@mixin text-preset-caption {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  line-height: 1.25;
 }
 
 @mixin visually-hidden {

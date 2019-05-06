@@ -36,12 +36,22 @@
     }
 
     .richtext {
-      font-size: 1.125rem;
-      text-align: left;
+      @include text-preset-small;
     }
 
+    // Quotes are left aligned in columns
     .quote {
       align-items: flex-start;
+
+      @include mq($from: tablet) {
+        padding-left: 0;
+        padding-right: 0;
+
+        &__author,
+        .richtext {
+          text-align: left;
+        }
+      }
     }
   }
 }

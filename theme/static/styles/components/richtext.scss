@@ -1,13 +1,10 @@
 .richtext {
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  line-height: 1.5;
+  @include text-preset-text;
+
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
   @include mq($from: tablet) {
-    font-size: 1.3125rem;
-    line-height: 1.6;
     padding-left: 0;
     padding-right: 0;
   }

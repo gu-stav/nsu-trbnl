@@ -12,10 +12,9 @@
   }
 
   &__caption {
+    @include text-preset-caption;
+
     color: #9B9B9B;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    line-height: 1.125;
     margin-top: 0.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
