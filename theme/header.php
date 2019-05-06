@@ -14,6 +14,9 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/dist/index.css" />
 
+    <link rel="preload" href="<?php bloginfo('template_directory'); ?>/dist/poppins-regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="<?php bloginfo('template_directory'); ?>/dist/poppins-bold.woff2" as="font" type="font/woff2">
+
     <?php wp_head(); ?>
   </head>
 
