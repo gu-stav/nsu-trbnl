@@ -1,0 +1,16 @@
+.mark {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  &__text {
+    background-color: black;
+    box-decoration-break: clone;
+    color: white;
+    display: inline;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.1;
+    padding: 0.25rem 0.5rem;
+  }
+}

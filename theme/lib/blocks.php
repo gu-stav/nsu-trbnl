@@ -108,6 +108,16 @@
       'icon' => 'info',
       'keywords' 	=> array('editor-insertmore'),
       'mode'	=> 'auto',
+    ],
+
+    [
+      'name' => 'highlight',
+      'title' => __('Hervorhebung'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'common',
+      'icon' => 'info',
+      'keywords' 	=> array('align-center'),
+      'mode'	=> 'auto',
     ]
   ];
 
