@@ -12,7 +12,7 @@
     position: relative;
 
     @include mq($from: tablet) {
-      padding: 4rem;
+      padding: 4rem 3rem;
       width: 50%;
     }
 
@@ -35,6 +35,7 @@
       margin-top: 1.5rem;
     }
 
+    // Text is smaller in the columns ¯\_(ツ)_/¯
     .richtext {
       @include text-preset-small;
     }
@@ -52,6 +53,15 @@
           text-align: left;
         }
       }
+    }
+
+    // Don't show the images as a grid, but as list
+    .grid {
+      flex-direction: column;
+    }
+
+    .grid__item {
+      flex-basis: 100%;
     }
   }
 }
