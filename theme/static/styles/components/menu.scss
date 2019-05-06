@@ -79,6 +79,8 @@
     }
   }
 
+  & > .menu-item > a:hover::after,
+  & > .menu-item > a:focus::after,
   & > .current-page-ancestor > a::after {
     @include mq($from: tablet) {
       background-color: currentColor;
@@ -117,8 +119,22 @@
   }
 
   .sub-menu {
+    > * {
+      @include mq($from: tablet) {
+        margin-left: 2rem;
+      }
+
+      @include mq($from: desktop) {
+        margin-left: 0.85rem;
+        margin-right: 0.85rem;
+      }
+    }
+
     > * > a {
       font-size: 1rem;
+      padding-left: 0.25rem;
+      padding-right: 0.75rem;
+      position: relative;
 
       @include mq($from: tablet) {
         font-size: 1rem;
@@ -127,15 +143,25 @@
       @include mq($from: desktop) {
         font-size: 1.35rem;
       }
-    }
 
-    > * + * {
-      @include mq($from: tablet) {
-        margin-left: 2rem;
+      &:hover,
+      &:focus {
+        background-color: white;
+        cursor: pointer;
       }
 
-      @include mq($from: desktop) {
-        margin-left: 2.5rem;
+      &:active {
+        color: black;
+      }
+    }
+
+    > *:not(:last-child) > a {
+      &::after {
+        color: white;
+        content: ' — ';
+        opacity: 0.65;
+        position: absolute;
+        right: -1.25rem;
       }
     }
 
