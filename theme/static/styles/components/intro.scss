@@ -3,6 +3,7 @@
   display: flex;
   margin-bottom: 2rem;
   max-height: 90vh;
+  width: 100%;
 
   @include mq($from: tablet) {
     min-height: 80vh;
