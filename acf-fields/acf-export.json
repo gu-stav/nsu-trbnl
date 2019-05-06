@@ -122,6 +122,37 @@
                                 ],
                                 "min": "",
                                 "max": ""
+                            },
+                            "layout_5cd0515e2efef": {
+                                "key": "layout_5cd0515e2efef",
+                                "name": "images",
+                                "label": "Bilder",
+                                "display": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5cd0516a2eff0",
+                                        "label": "Bilder",
+                                        "name": "images",
+                                        "type": "clone",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "clone": [
+                                            "group_5c8a40c96003b"
+                                        ],
+                                        "display": "seamless",
+                                        "layout": "block",
+                                        "prefix_label": 0,
+                                        "prefix_name": 0
+                                    }
+                                ],
+                                "min": "",
+                                "max": ""
                             }
                         },
                         "button_label": "Block hinzufügen",
@@ -223,6 +254,37 @@
                                         },
                                         "clone": [
                                             "group_5c93da084c6e2"
+                                        ],
+                                        "display": "seamless",
+                                        "layout": "block",
+                                        "prefix_label": 0,
+                                        "prefix_name": 0
+                                    }
+                                ],
+                                "min": "",
+                                "max": ""
+                            },
+                            "layout_5cd052e8852c6": {
+                                "key": "layout_5cd052e8852c6",
+                                "name": "images",
+                                "label": "Bilder",
+                                "display": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5cd052f0852c7",
+                                        "label": "Bilder",
+                                        "name": "images",
+                                        "type": "clone",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "clone": [
+                                            "group_5c8a40c96003b"
                                         ],
                                         "display": "seamless",
                                         "layout": "block",
